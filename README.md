@@ -23,6 +23,11 @@ coming soon
     - Client: `npm run dev:client`
     - Server `npm run dev:server`
   
+  ## Lunch 
+  ### Docker
+  
+    ``` docker run -p 49160:8080 -d <your username>/webauthn ```
+
   ### License
     - MIT
 

@@ -10,7 +10,7 @@
     "start": "npm run build && node server/index.js"
   },
   "keywords": [],
-  "author": "Toni Jukica",
+  "author": "Adeojo Emmanuel",
   "license": "MIT",
   "dependencies": {
     "@lapo/asn1js": "^1.1.0",
