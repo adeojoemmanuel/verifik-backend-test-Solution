@@ -5,7 +5,8 @@ Users can register with a username and one of the supported authenticators.
 Login process requires matching username and authenticator pair.
 
 ## Demo link:
-coming soon
+
+   https://unrivaled-narwhal-8e9370.netlify.app
 
 ## Installation
   ### Requirements
@@ -25,7 +26,7 @@ coming soon
   
   ## Lunch 
   ### Docker
-  
+
     ``` docker run -p 49160:8080 -d <your username>/webauthn ```
 
   ### License
