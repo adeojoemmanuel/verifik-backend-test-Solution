@@ -29,16 +29,17 @@ function App() {
 					setErrMsg('');
 					setSuccessMsg('You can now try logging in');
 				}
-				else
+				else{
 					setErrMsg(response.message);
+				}
+				setEmail('');
 			})
 			.catch(err => {
 				registerFail({email})
 					.then(() => {
-						if(err.response)
-							setErrMsg(err.response.data);
-						else
-							console.log(err);
+						console.log(err);
+						setErrMsg(err.response.data.message);
+						setEmail('');
 					});
 			});
 	};
@@ -51,9 +52,11 @@ function App() {
 			})
 			.then((response) => {
 				let getAssertionResponse = publicKeyCredentialToJSON(response);
+				setEmail('');
 				return sendWebAuthnResponse(getAssertionResponse);
 			})
 			.then((response) => {
+				console.log(response);
 				if(response.status === 'ok') {
 					localStorage.setItem('loggedIn', true);
 					setLoggedIn(true);
@@ -62,14 +65,14 @@ function App() {
 					setErrMsg('');
 				} else {
 					setSuccessMsg('');
-					setErrMsg(response.message);
+					setErrMsg(response);
 				}
 			})
 			.catch(err => {
-				if(err.response)
-					setErrMsg(err.response.data);
-				else
-					console.log(err);
+				console.log(err);
+				setErrMsg(err.response.data.message);
+				setEmail('');
+				
 			});
 	};
 	const handleLogout = () => {
