@@ -30,7 +30,7 @@ function serverMakeCred(id, email) {
 	const makeCredentialds = {
 		challenge: randomBase64URLBuffer(32),
 		rp: {
-			name: 'Toni WebAuthn App',
+			name: 'Imm WebAuthn App',
 		},
 		user: {
 			id,

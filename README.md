@@ -6,7 +6,7 @@ Login process requires matching username and authenticator pair.
 
 ## Demo link:
 
-   https://unrivaled-narwhal-8e9370.netlify.app
+   https://webauthn-task.herokuapp.com/
 
 ## Installation
   ### Requirements
