@@ -113,9 +113,14 @@ function App() {
 								<Form.Input 
 									fluid
 									icon='user'
+									required
 									iconPosition='left'
-									placeholder='Username'
+									placeholder='Email'
 									onChange={handleUsernameChange}
+									error={validEmail ? false : {
+										content: 'Please enter a valid email address.',
+										pointing: 'below'
+									}}
 								/>
 								<Button 
 									fluid 
